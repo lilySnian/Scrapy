@@ -1,0 +1,21 @@
+说明：
+抓取豆瓣电影中电影的基本信息，如导演、主演、类型、官方网站、IMDb链接等信息，并将结果以json格式存储到文件中。
+
+目录结构：
+douban
+├─ readme    说明文件
+├─ scrapy.cfg
+└─movie
+    ├─ douban_movie.json     部分抓取结果
+    ├─ items.py     items定义
+    ├─ main.py   程序入口
+    ├─ pipelines.py     存储
+    ├─ settings.py   设置了useragent池、pipelines、延时等
+    ├─__init__.py
+    └── spiders
+       ├──movie_spider.py   处理规则过滤、页面信息提取
+       ├──rotate_useragent.py  useragent池
+       └──__init__.py
+
+bug：
+1、xpath：某些页面抓取结果不正确，有错位现象。
